@@ -134,7 +134,7 @@ const SITE_DATA = {
     title: "Let's build something",
     highlight: "exceptional.",
     primaryButton: { text: "Get in Touch", link: "mailto:oscallen@gmail.com" },
-    secondaryButton: { text: "0945-143-5449", link: "tel:09451435449" },
+    secondaryButton: { text: "0945-543-5449", link: "tel:09455435449" },
   },
 
   // ─── FOOTER ────────────────────────────────────────────
@@ -143,7 +143,7 @@ const SITE_DATA = {
     links: [
       { text: "Email", url: "mailto:oscallen@gmail.com" },
       { text: "LinkedIn", url: "#" },
-      { text: "📄 Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
+      { text: "📃 Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     ],
   },
 };
