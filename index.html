@@ -3,89 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oscar Allen Brioso — iOS Developer</title>
+  <title>Oscar Allen Brioso — Lead iOS Engineer</title>
   <meta name="description" content="Multi-Platform Engineer specializing in high-performance iOS, Android, and Front-End ecosystems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--bg-primary:#0a0a0f;--bg-secondary:#111118;--bg-card:#16161e;--bg-card-hover:#1c1c26;--bg-tag:#1e1e2a;--border:#222233;--border-light:#2a2a3a;--text-primary:#f0f0f5;--text-secondary:#9999aa;--text-muted:#666677;--accent:#6366f1;--accent-light:#818cf8;--accent-dim:rgba(99,102,241,0.15);--font-body:'DM Sans',-apple-system,sans-serif;--font-display:'DM Serif Display',Georgia,serif;--font-mono:'JetBrains Mono','SF Mono',monospace;--max-width:1120px;--radius:12px;--radius-sm:8px;--radius-xs:6px}
+    :root{
+      --bg-primary:#0a0a0f;--bg-secondary:#111118;--bg-card:#16161e;--bg-card-hover:#1c1c26;--bg-tag:#1e1e2a;
+      --border:#222233;--border-light:#2a2a3a;
+      --text-primary:#f0f0f5;--text-secondary:#9999aa;--text-muted:#666677;
+      --accent:#6366f1;--accent-light:#818cf8;--accent-dim:rgba(99,102,241,0.15);
+      --font-body:'DM Sans',-apple-system,sans-serif;
+      --font-display:'DM Serif Display',Georgia,serif;
+      --font-mono:'JetBrains Mono','SF Mono',monospace;
+      --max-width:1120px;--radius:12px;--radius-sm:8px;--radius-xs:6px
+    }
     html{scroll-behavior:smooth}
     body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}img{display:block;max-width:100%}ul{list-style:none}
     .container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
-    .label{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted)}
+    .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted)}
+
+    /* ===== NAVIGATION ===== */
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
     .nav__inner{max-width:var(--max-width);margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
-    .nav__logo{font-family:var(--font-mono);font-size:13px;font-weight:600;letter-spacing:1px;color:var(--text-primary)}
+    .nav__logo{font-family:var(--font-mono);font-size:14px;font-weight:600;letter-spacing:1px;color:var(--text-primary)}
     .nav__links{display:flex;align-items:center;gap:32px}
-    .nav__link{font-size:13px;font-weight:500;color:var(--text-secondary);transition:color .25s}
+    .nav__link{font-size:14px;font-weight:500;color:var(--text-secondary);transition:color .25s}
     .nav__link:hover{color:var(--text-primary)}
-    .nav__resume{font-size:13px;font-weight:600;padding:8px 20px;background:var(--accent);color:#fff;border-radius:var(--radius-xs);transition:background .25s,transform .2s}
-    .nav__resume:hover{background:var(--accent-light);transform:translateY(-1px)}
     .nav__toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
     .nav__toggle span{width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:.3s}
+
+    /* ===== HERO ===== */
     .hero{padding:140px 0 80px}
     .hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-    .hero__badge{display:inline-block;padding:6px 14px;border:1px solid var(--accent);border-radius:20px;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent-light);background:var(--accent-dim);margin-bottom:24px}
-    .hero__name{font-family:var(--font-display);font-size:clamp(48px,7vw,80px);font-weight:400;line-height:1.05;color:var(--text-primary);margin-bottom:24px}
+    .hero__badge{display:inline-block;padding:6px 14px;border:1px solid var(--accent);border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent-light);background:var(--accent-dim);margin-bottom:24px}
+    .hero__name{font-family:var(--font-display);font-size:clamp(52px,7.5vw,88px);font-weight:400;line-height:1.05;color:var(--text-primary);margin-bottom:24px}
     .hero__name span{color:var(--accent-light)}
-    .hero__desc{font-size:16px;color:var(--text-secondary);max-width:380px;line-height:1.7;margin-bottom:32px}
+    .hero__desc{font-size:18px;color:var(--text-secondary);max-width:420px;line-height:1.7;margin-bottom:32px}
     .hero__actions{display:flex;gap:12px;margin-bottom:40px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:14px;font-weight:600;border-radius:var(--radius-sm);transition:all .25s;cursor:pointer;border:none;font-family:var(--font-body)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;font-size:15px;font-weight:600;border-radius:var(--radius-sm);transition:all .25s;cursor:pointer;border:none;font-family:var(--font-body)}
     .btn--primary{background:var(--accent);color:#fff}.btn--primary:hover{background:var(--accent-light);transform:translateY(-2px)}
     .btn--secondary{background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border)}.btn--secondary:hover{background:var(--bg-card-hover);border-color:var(--border-light);transform:translateY(-2px)}
-    .btn--outline{background:transparent;color:var(--text-primary);border:1px solid var(--border);font-family:var(--font-mono);font-size:13px;letter-spacing:.5px}.btn--outline:hover{border-color:var(--accent);color:var(--accent-light);transform:translateY(-2px)}
-    .hero__meta{display:flex;gap:24px;font-size:13px;color:var(--text-muted)}
+    .btn--outline{background:transparent;color:var(--text-primary);border:1px solid var(--border);font-family:var(--font-mono);font-size:14px;letter-spacing:.5px}.btn--outline:hover{border-color:var(--accent);color:var(--accent-light);transform:translateY(-2px)}
+    .hero__meta{display:flex;gap:24px;font-size:14px;color:var(--text-muted)}
     .hero__meta-item{display:flex;align-items:center;gap:6px}
     .hero__visual{position:relative}
     .hero__image-card{width:100%;aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--bg-card);border:1px solid var(--border)}
     .hero__image-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(10,10,15,0.95));display:flex;align-items:flex-end;justify-content:space-between}
     .hero__image-label .label{color:var(--accent-light);margin-bottom:4px}
-    .hero__image-title{font-size:14px;font-weight:500}
+    .hero__image-title{font-size:15px;font-weight:500}
     .hero__image-icon{width:32px;height:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);display:flex;align-items:center;justify-content:center}
     .abstract-visual{width:100%;height:100%;position:relative;background:radial-gradient(ellipse at 50% 50%,#1a1a2e 0%,var(--bg-primary) 100%);overflow:hidden}
     .abstract-visual::before{content:'';position:absolute;top:50%;left:50%;width:300px;height:300px;transform:translate(-50%,-50%);border-radius:50%;background:conic-gradient(from 0deg,transparent,rgba(99,102,241,0.08),transparent,rgba(99,102,241,0.04),transparent);animation:spin 20s linear infinite}
     .abstract-ring{position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(99,102,241,0.1);transform:translate(-50%,-50%)}
     .abstract-ring:nth-child(1){width:80px;height:80px}.abstract-ring:nth-child(2){width:140px;height:140px;border-color:rgba(99,102,241,0.08)}.abstract-ring:nth-child(3){width:200px;height:200px;border-color:rgba(99,102,241,0.06)}.abstract-ring:nth-child(4){width:260px;height:260px;border-color:rgba(99,102,241,0.04)}.abstract-ring:nth-child(5){width:320px;height:320px;border-color:rgba(99,102,241,0.03)}
     @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+    /* ===== SECTIONS ===== */
     section{padding:80px 0}
-    .section-title{font-family:var(--font-display);font-size:clamp(32px,4.5vw,44px);font-weight:400;margin-bottom:48px}
+    .section-title{font-family:var(--font-display);font-size:clamp(36px,5vw,52px);font-weight:400;margin-bottom:48px}
+
+    /* ===== TIMELINE ===== */
     .timeline{position:relative;max-width:900px;margin:0 auto}
     .timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--border);transform:translateX(-50%)}
     .timeline__item{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:60px;position:relative}
     .timeline__dot{position:absolute;left:50%;top:20px;width:12px;height:12px;background:var(--accent);border:3px solid var(--bg-primary);border-radius:50%;transform:translateX(-50%);z-index:2}
-    .timeline__date{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding-top:20px}
+    .timeline__date{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding-top:20px}
     .timeline__item:nth-child(odd) .timeline__date{text-align:right}
     .timeline__card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:border-color .3s,transform .3s}
     .timeline__card:hover{border-color:var(--border-light);transform:translateY(-2px)}
-    .timeline__role{font-size:18px;font-weight:700;margin-bottom:2px}
-    .timeline__role-label{font-family:var(--font-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-light);margin-bottom:16px;display:block}
-    .timeline__company{font-size:15px;font-weight:600;margin-bottom:4px}
-    .timeline__company-role{font-size:13px;color:var(--text-secondary);margin-bottom:12px}
+    .timeline__role{font-size:20px;font-weight:700;margin-bottom:2px}
+    .timeline__role-label{font-family:var(--font-mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-light);margin-bottom:6px;display:block}
+    .timeline__company{font-size:17px;font-weight:600;margin-bottom:4px}
+    .timeline__company-role{font-size:14px;color:var(--text-secondary);margin-bottom:14px}
     .timeline__bullets{display:flex;flex-direction:column;gap:10px}
-    .timeline__bullet{font-size:13px;color:var(--text-secondary);line-height:1.6;display:flex;gap:10px;align-items:flex-start}
-    .timeline__bullet::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:7px}
-    .timeline__desc{font-size:13px;color:var(--text-secondary);line-height:1.6}
+    .timeline__bullet{font-size:14px;color:var(--text-secondary);line-height:1.7;display:flex;gap:10px;align-items:flex-start}
+    .timeline__bullet::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:8px}
+    .timeline__desc{font-size:14px;color:var(--text-secondary);line-height:1.7}
+
+    /* ===== EXPERTISE ===== */
     .expertise{border-top:1px solid var(--border)}
     .expertise__inner{display:grid;grid-template-columns:1fr 2fr;gap:60px}
-    .expertise__desc{font-size:15px;color:var(--text-secondary);line-height:1.7;margin-top:16px}
+    .expertise__desc{font-size:17px;color:var(--text-secondary);line-height:1.7;margin-top:16px}
     .expertise__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-    .expertise__category-title{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
+    .expertise__category-title{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
     .expertise__category-num{color:var(--accent-light);margin-right:8px}
     .expertise__tags{display:flex;flex-wrap:wrap;gap:8px}
-    .tag{padding:8px 16px;background:var(--bg-tag);border:1px solid var(--border);border-radius:var(--radius-xs);font-size:12px;font-weight:600;color:var(--text-secondary);transition:all .25s;text-transform:uppercase;letter-spacing:.5px}
+    .tag{padding:9px 18px;background:var(--bg-tag);border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-weight:600;color:var(--text-secondary);transition:all .25s;text-transform:uppercase;letter-spacing:.5px}
     .tag:hover{border-color:var(--accent);color:var(--text-primary);background:var(--accent-dim)}
+
+    /* ===== EDUCATION ===== */
     .education{background:var(--bg-secondary);border-radius:var(--radius);padding:48px;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;border:1px solid var(--border)}
-    .education__section-title{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px}
+    .education__section-title{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px}
     .education__item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
     .education__icon{width:40px;height:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .education__icon svg{width:18px;height:18px;color:var(--accent-light)}
-    .education__name{font-size:15px;font-weight:600;margin-bottom:2px}
-    .education__detail{font-size:13px;color:var(--text-secondary)}
-    .education__quote{font-size:12px;color:var(--text-muted);font-style:italic;margin-top:6px}
-    .education__cert-type{font-family:var(--font-mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+    .education__name{font-size:16px;font-weight:600;margin-bottom:2px}
+    .education__detail{font-size:14px;color:var(--text-secondary)}
+    .education__quote{font-size:13px;color:var(--text-muted);font-style:italic;margin-top:6px}
+    .education__cert-type{font-family:var(--font-mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+
+    /* ===== PROJECTS ===== */
     .projects{border-top:1px solid var(--border)}
     .projects__grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
     .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .3s,transform .3s;display:block}
@@ -102,24 +123,33 @@
     .project-visual--grid{background:linear-gradient(135deg,#0f1518,#0a1015)}
     .project-visual--grid::before{content:'';width:80%;height:80%;background:repeating-linear-gradient(0deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 30px),repeating-linear-gradient(90deg,rgba(255,255,255,0.02) 0px,rgba(255,255,255,0.02) 1px,transparent 1px,transparent 30px);position:absolute}
     .project-card__body{padding:24px;display:flex;align-items:flex-start;justify-content:space-between}
-    .project-card__title{font-size:20px;font-weight:700;margin-bottom:8px}
-    .project-card__desc{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:12px}
+    .project-card__title{font-size:22px;font-weight:700;margin-bottom:8px}
+    .project-card__desc{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:12px}
     .project-card__tags{display:flex;gap:8px}
-    .project-card__tag{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--accent-light)}
+    .project-card__tag{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--accent-light)}
     .project-card__arrow{width:36px;height:36px;background:var(--bg-tag);border:1px solid var(--border);border-radius:var(--radius-xs);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px;transition:all .25s}
     .project-card:hover .project-card__arrow{background:var(--accent-dim);border-color:var(--accent)}
+
+    /* ===== CTA ===== */
     .cta{text-align:center;padding:100px 0}
-    .cta__title{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);font-weight:400;line-height:1.2;margin-bottom:36px}
+    .cta__title{font-family:var(--font-display);font-size:clamp(40px,5.5vw,64px);font-weight:400;line-height:1.2;margin-bottom:36px}
     .cta__title em{font-style:italic;color:var(--accent-light)}
     .cta__actions{display:flex;justify-content:center;gap:12px}
+
+    /* ===== FOOTER ===== */
     .footer{border-top:1px solid var(--border);padding:24px 0}
     .footer__inner{display:flex;align-items:center;justify-content:space-between}
-    .footer__copy{font-family:var(--font-mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)}
+    .footer__copy{font-family:var(--font-mono);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)}
+    .footer__copy:empty{display:none}
     .footer__links{display:flex;gap:24px}
-    .footer__link{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);transition:color .25s}
+    .footer__link{font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);transition:color .25s}
     .footer__link:hover{color:var(--text-primary)}
+
+    /* ===== SCROLL ANIMATIONS ===== */
     .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* ===== RESPONSIVE ===== */
     @media(max-width:900px){
       .hero__inner{grid-template-columns:1fr;gap:40px}
       .expertise__inner{grid-template-columns:1fr;gap:32px}
@@ -135,7 +165,7 @@
       .nav__links{display:none}
       .nav__links.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(10,10,15,0.97);backdrop-filter:blur(20px);padding:20px 24px;gap:16px;border-bottom:1px solid var(--border)}
       .nav__toggle{display:flex}
-      .hero{padding:120px 0 60px}.hero__name{font-size:42px}
+      .hero{padding:120px 0 60px}.hero__name{font-size:46px}
       .hero__actions{flex-direction:column}
       .hero__meta{flex-direction:column;gap:8px}
       .expertise__grid{grid-template-columns:1fr}
@@ -165,22 +195,168 @@
       shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
       layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>'
     };
-    const h=D.hero;
-    document.getElementById('nav').innerHTML=`<a href="#" class="nav__logo">${D.brand}</a><button class="nav__toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav__links').classList.toggle('open')"><span></span><span></span><span></span></button><div class="nav__links">${D.navLinks.map(l=>`<a href="#${l.toLowerCase()}" class="nav__link">${l}</a>`).join('')}<a href="${D.resumeUrl}" class="nav__resume">Resume</a></div>`;
-    document.getElementById('hero').innerHTML=`<div class="hero__content"><div class="hero__badge">${h.badge}</div><h1 class="hero__name">${h.firstName}<br><span>${h.lastName}</span></h1><p class="hero__desc">${h.description}</p><div class="hero__actions"><a href="${h.primaryButton.link}" class="btn btn--primary">${h.primaryButton.text} ${I.arrow}</a><a href="${h.secondaryButton.link}" class="btn btn--secondary">${h.secondaryButton.text}</a></div><div class="hero__meta"><span class="hero__meta-item">${I.pin} ${h.location}</span><span class="hero__meta-item">${I.mail} ${h.email}</span></div></div><div class="hero__visual reveal"><div class="hero__image-card"><div class="abstract-visual"><div class="abstract-ring"></div><div class="abstract-ring"></div><div class="abstract-ring"></div><div class="abstract-ring"></div><div class="abstract-ring"></div></div><div class="hero__image-overlay"><div class="hero__image-label"><span class="label" style="color:var(--accent-light)">Active Progress</span><div class="hero__image-title">${h.activeProgress}</div></div><div class="hero__image-icon">${I.monitor}</div></div></div></div>`;
-    document.getElementById('timeline').innerHTML=D.experience.map(e=>{let c='';if(e.role){c=`<div class="timeline__role">${e.role}</div>${e.roleLabel?`<span class="timeline__role-label">${e.roleLabel}</span>`:''}${e.bullets?`<div class="timeline__bullets">${e.bullets.map(b=>`<div class="timeline__bullet">${b}</div>`).join('')}</div>`:''}`}else{c=`<div class="timeline__company">${e.company}</div><div class="timeline__company-role">${e.companyRole}</div><p class="timeline__desc">${e.description}</p>`}return`<div class="timeline__item reveal"><div class="timeline__date" style="padding-top:20px">${e.date}</div><div class="timeline__card">${c}</div><div class="timeline__dot"></div></div>`}).join('');
-    const ex=D.expertise;
-    document.getElementById('expertiseSection').innerHTML=`<div><h2 class="section-title" style="margin-bottom:0">${ex.headline}</h2><p class="expertise__desc">${ex.description}</p></div><div class="expertise__grid">${ex.categories.map(c=>`<div><div class="expertise__category-title"><span class="expertise__category-num">${c.number}</span>/ ${c.title}</div><div class="expertise__tags">${c.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>`).join('')}</div>`;
-    const ed=D.education;
-    document.getElementById('educationSection').innerHTML=`<div><div class="education__section-title">Academic Foundation</div>${ed.academic.map(a=>`<div class="education__item"><div class="education__icon">${I[a.icon]||''}</div><div><div class="education__name">${a.name}</div><div class="education__detail">${a.detail}</div>${a.quote?`<div class="education__quote">${a.quote}</div>`:''}</div></div>`).join('')}</div><div><div class="education__section-title">Certifications &amp; Training</div>${ed.certifications.map(c=>`<div class="education__item"><div class="education__icon">${I[c.icon]||''}</div><div><div class="education__name">${c.name}</div><div class="education__cert-type">${c.detail}</div></div></div>`).join('')}</div>`;
-    document.getElementById('projectsGrid').innerHTML=D.projects.map(p=>{const v=p.image?`<img src="${p.image}" alt="${p.title}"/>`:`<div class="project-visual project-visual--${p.visualStyle||'grid'}"></div>`;return`<a href="${p.link}" class="project-card reveal"><div class="project-card__image">${v}</div><div class="project-card__body"><div><div class="project-card__title">${p.title}</div><p class="project-card__desc">${p.description}</p><div class="project-card__tags">${p.tags.map(t=>`<span class="project-card__tag">${t}</span>`).join('')}</div></div><div class="project-card__arrow">${I.arrow}</div></div></a>`}).join('');
-    const ct=D.cta;
-    document.getElementById('ctaSection').innerHTML=`<h2 class="cta__title reveal">${ct.title}<br><em>${ct.highlight}</em></h2><div class="cta__actions reveal"><a href="${ct.primaryButton.link}" class="btn btn--primary">${ct.primaryButton.text}</a><a href="${ct.secondaryButton.link}" class="btn btn--outline">${ct.secondaryButton.text}</a></div>`;
-    const ft=D.footer;
-    document.getElementById('footerSection').innerHTML=`<div class="footer__copy">${ft.copy}</div><div class="footer__links">${ft.links.map(l=>`<a href="${l.url}" class="footer__link">${l.text}</a>`).join('')}</div>`;
-    const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-    document.querySelectorAll('.nav__link,.nav__resume').forEach(l=>{l.addEventListener('click',()=>document.querySelector('.nav__links').classList.remove('open'))});
+
+    const h = D.hero;
+
+    // ─── NAV (no resume button) ──────────────────────────
+    document.getElementById('nav').innerHTML = `
+      <a href="#" class="nav__logo">${D.brand}</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav__links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links">
+        ${D.navLinks.map(l => `<a href="#${l.toLowerCase()}" class="nav__link">${l}</a>`).join('')}
+      </div>`;
+
+    // ─── HERO (resume opens new tab) ─────────────────────
+    document.getElementById('hero').innerHTML = `
+      <div class="hero__content">
+        <div class="hero__badge">${h.badge}</div>
+        <h1 class="hero__name">${h.firstName}<br><span>${h.lastName}</span></h1>
+        <p class="hero__desc">${h.description}</p>
+        <div class="hero__actions">
+          <a href="${h.primaryButton.link}" class="btn btn--primary">${h.primaryButton.text} ${I.arrow}</a>
+          <a href="${h.secondaryButton.link}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">${h.secondaryButton.text}</a>
+        </div>
+        <div class="hero__meta">
+          <span class="hero__meta-item">${I.pin} ${h.location}</span>
+          <span class="hero__meta-item">${I.mail} ${h.email}</span>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="hero__image-card">
+          <div class="abstract-visual">
+            <div class="abstract-ring"></div><div class="abstract-ring"></div>
+            <div class="abstract-ring"></div><div class="abstract-ring"></div>
+            <div class="abstract-ring"></div>
+          </div>
+          <div class="hero__image-overlay">
+            <div class="hero__image-label">
+              <span class="label" style="color:var(--accent-light)">Active Progress</span>
+              <div class="hero__image-title">${h.activeProgress}</div>
+            </div>
+            <div class="hero__image-icon">${I.monitor}</div>
+          </div>
+        </div>
+      </div>`;
+
+    // ─── TIMELINE (supports role+company+bullets combo) ──
+    document.getElementById('timeline').innerHTML = D.experience.map(e => {
+      let c = '';
+      if (e.role) {
+        // Current role format: role title + label + optional company + bullets
+        c = `<div class="timeline__role">${e.role}</div>`;
+        if (e.roleLabel) c += `<span class="timeline__role-label">${e.roleLabel}</span>`;
+        if (e.company) c += `<div class="timeline__company">${e.company}</div>`;
+        if (e.companyRole) c += `<div class="timeline__company-role">${e.companyRole}</div>`;
+        if (e.bullets) c += `<div class="timeline__bullets">${e.bullets.map(b => `<div class="timeline__bullet">${b}</div>`).join('')}</div>`;
+      } else {
+        // Company-led format
+        c = `<div class="timeline__company">${e.company}</div>`;
+        c += `<div class="timeline__company-role">${e.companyRole}</div>`;
+        if (e.bullets) {
+          c += `<div class="timeline__bullets">${e.bullets.map(b => `<div class="timeline__bullet">${b}</div>`).join('')}</div>`;
+        } else if (e.description) {
+          c += `<p class="timeline__desc">${e.description}</p>`;
+        }
+      }
+      return `<div class="timeline__item reveal">
+        <div class="timeline__date" style="padding-top:20px">${e.date}</div>
+        <div class="timeline__card">${c}</div>
+        <div class="timeline__dot"></div>
+      </div>`;
+    }).join('');
+
+    // ─── EXPERTISE ───────────────────────────────────────
+    const ex = D.expertise;
+    document.getElementById('expertiseSection').innerHTML = `
+      <div>
+        <h2 class="section-title" style="margin-bottom:0">${ex.headline}</h2>
+        <p class="expertise__desc">${ex.description}</p>
+      </div>
+      <div class="expertise__grid">
+        ${ex.categories.map(c => `
+          <div>
+            <div class="expertise__category-title"><span class="expertise__category-num">${c.number}</span>/ ${c.title}</div>
+            <div class="expertise__tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          </div>`).join('')}
+      </div>`;
+
+    // ─── EDUCATION ───────────────────────────────────────
+    const ed = D.education;
+    document.getElementById('educationSection').innerHTML = `
+      <div>
+        <div class="education__section-title">Academic Foundation</div>
+        ${ed.academic.map(a => `
+          <div class="education__item">
+            <div class="education__icon">${I[a.icon] || ''}</div>
+            <div>
+              <div class="education__name">${a.name}</div>
+              <div class="education__detail">${a.detail}</div>
+              ${a.quote ? `<div class="education__quote">${a.quote}</div>` : ''}
+            </div>
+          </div>`).join('')}
+      </div>
+      <div>
+        <div class="education__section-title">Certifications &amp; Training</div>
+        ${ed.certifications.map(c => `
+          <div class="education__item">
+            <div class="education__icon">${I[c.icon] || ''}</div>
+            <div>
+              <div class="education__name">${c.name}</div>
+              <div class="education__cert-type">${c.detail}</div>
+            </div>
+          </div>`).join('')}
+      </div>`;
+
+    // ─── PROJECTS ────────────────────────────────────────
+    document.getElementById('projectsGrid').innerHTML = D.projects.map(p => {
+      const v = p.image
+        ? `<img src="${p.image}" alt="${p.title}"/>`
+        : `<div class="project-visual project-visual--${p.visualStyle || 'grid'}"></div>`;
+      return `<a href="${p.link}" class="project-card reveal">
+        <div class="project-card__image">${v}</div>
+        <div class="project-card__body">
+          <div>
+            <div class="project-card__title">${p.title}</div>
+            <p class="project-card__desc">${p.description}</p>
+            <div class="project-card__tags">${p.tags.map(t => `<span class="project-card__tag">${t}</span>`).join('')}</div>
+          </div>
+          <div class="project-card__arrow">${I.arrow}</div>
+        </div>
+      </a>`;
+    }).join('');
+
+    // ─── CTA ─────────────────────────────────────────────
+    const ct = D.cta;
+    document.getElementById('ctaSection').innerHTML = `
+      <h2 class="cta__title reveal">${ct.title}<br><em>${ct.highlight}</em></h2>
+      <div class="cta__actions reveal">
+        <a href="${ct.primaryButton.link}" class="btn btn--primary">${ct.primaryButton.text}</a>
+        <a href="${ct.secondaryButton.link}" class="btn btn--outline">${ct.secondaryButton.text}</a>
+      </div>`;
+
+    // ─── FOOTER (links open new tab for external) ────────
+    const ft = D.footer;
+    document.getElementById('footerSection').innerHTML = `
+      <div class="footer__copy">${ft.copy}</div>
+      <div class="footer__links">
+        ${ft.links.map(l => {
+          const isExternal = l.url.startsWith('http');
+          return `<a href="${l.url}" class="footer__link"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''}>${l.text}</a>`;
+        }).join('')}
+      </div>`;
+
+    // ─── SCROLL REVEAL ───────────────────────────────────
+    const obs = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav__link').forEach(l => {
+      l.addEventListener('click', () => document.querySelector('.nav__links').classList.remove('open'));
+    });
   </script>
 </body>
 </html>

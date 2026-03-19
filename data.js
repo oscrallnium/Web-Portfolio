@@ -7,7 +7,6 @@ const SITE_DATA = {
   // ─── NAVIGATION & BRANDING ─────────────────────────────
   brand: "ENGINEER_CORE",
   navLinks: ["Experience", "Expertise", "Projects", "Education"],
-  resumeUrl: "#contact", // link to your resume PDF or section
 
   // ─── HERO SECTION ──────────────────────────────────────
   hero: {
@@ -17,7 +16,7 @@ const SITE_DATA = {
     description:
       "Multi-Platform Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
     primaryButton: { text: "Explore Projects", link: "#projects" },
-    secondaryButton: { text: "Resume", link: "#contact" },
+    secondaryButton: { text: "📄 Resume", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     location: "Makati City, PH",
     email: "oscallen@gmail.com",
     activeProgress: "Refining Mobile Architecture",
@@ -27,29 +26,41 @@ const SITE_DATA = {
   // Each item: { date, role, roleLabel, company, companyRole, bullets OR description }
   experience: [
     {
-      date: "Jan 2025 — Present",
-      role: "iOS Developer",
+      date: "Oct 2025 — Present",
+      role: "Lead iOS Engineer",
       roleLabel: "Current Role",
+      company: "Agile Digital Ventures Inc.",
+      companyRole: "Hybrid",
       bullets: [
-        "Develop and maintain iOS application by resolving bugs and enhancing UI/UX based on QA and business feedback.",
-        "Reduced application crash frequency by 30% through proactive Crashlytics monitoring.",
-        "Increased revenue by 15% via cross-platform marketing integrations and flow optimization.",
-        "Manage end-to-end internal testing and App Store distribution pipelines.",
+        "Develop and maintain the iOS application by resolving bugs and enhancing UI/UX based on QA feedback and business requirements.",
+        "Ensure code quality and stability by implementing unit testing suites for essential features.",
+        "Conduct code reviews for other iOS developers to ensure alignment with the team's coding standards and project requirements.",
+        "Create technical documentation for the mobile team, including coding standards for both iOS and Android, to support internal and external collaborations and streamline workflows with other departments.",
+        "Reduced application crash frequency by 30% since 2025 by proactively monitoring and diagnosing iOS and Android Crashlytics reports.",
+        "Increased revenue by 15% by leading cross-platform digital marketing integrations and optimizing user flows for iOS and Android.",
+        "Managed the end-to-end internal testing, release pipeline, and App Store distribution for iOS applications.",
       ],
     },
     {
       date: "Nov 2023 — May 2024",
       company: "Red Planet Hotels",
       companyRole: "iOS Developer (Hybrid)",
-      description:
-        "Rigorous debugging reducing app issues by 40% and efficiency gains through advanced multi-threading implementation.",
+      bullets: [
+        "Maintained and enhanced the company's iOS booking application for hotel branches in the Philippines and Thailand, improving stability, performance, and user experience, reducing app-issues by 40% from Q3 2024 to Q3 2025.",
+        "Integrated RESTful APIs to enable efficient data retrieval, improving load times and enhancing user experience.",
+        "Led the implementation of analytics, push notifications, cloud messaging, payment gateway integration, and UI/UX enhancements in the iOS app, contributing to a 40% increase in market coverage in Q2 2025.",
+        "Collaborated with designers, product managers, android and backend engineers to deliver intuitive, user-friendly interfaces, ensuring clear and consistent communication of progress and blockers.",
+      ],
     },
     {
       date: "July 2024 — Present",
       company: "D.W. Morgan",
       companyRole: "iOS Engineer (Intern)",
-      description:
-        "Developed reusable Cocoapod libraries and improved workflow efficiency by 30% using Agile methodologies.",
+      bullets: [
+        "Developed reusable Cocoapod libraries (document scanner, photo viewer) used across company apps.",
+        "Improved project efficiency by ~30% through Jira-based workflow and Agile methodologies.",
+        "Contributed to Sprint Planning and Retrospectives, ensuring iterative progress and alignment.",
+      ],
     },
   ],
 
@@ -128,11 +139,11 @@ const SITE_DATA = {
 
   // ─── FOOTER ────────────────────────────────────────────
   footer: {
-    copy: "© 2024 Engineering Elegance • San Francisco, CA",
+    copy: "",
     links: [
       { text: "Email", url: "mailto:oscallen@gmail.com" },
       { text: "LinkedIn", url: "#" },
-      { text: "Resume", url: "#" },
+      { text: "📄 Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     ],
   },
 };
