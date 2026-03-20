@@ -142,7 +142,7 @@ const SITE_DATA = {
     copy: "",
     links: [
       { text: "Email", url: "mailto:oscallen@gmail.com" },
-      { text: "LinkedIn", url: "https://www.linkedin.com/in/oscrallnium/" },
+      { text: "LinkedIn", url: "https://linkedin.com/in/oscrallnium/" },
       { text: "Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     ],
   },
