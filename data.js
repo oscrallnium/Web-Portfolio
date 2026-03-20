@@ -16,7 +16,7 @@ const SITE_DATA = {
     description:
       "Multi-Platform Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
     primaryButton: { text: "Explore Projects", link: "#projects" },
-    secondaryButton: { text: "📄 Resume", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
+    secondaryButton: { text: "Resume", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     location: "Makati City, PH",
     email: "oscallen@gmail.com",
     activeProgress: "Refining Mobile Architecture",
@@ -143,7 +143,7 @@ const SITE_DATA = {
     links: [
       { text: "Email", url: "mailto:oscallen@gmail.com" },
       { text: "LinkedIn", url: "#" },
-      { text: "📄 Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
+      { text: "Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     ],
   },
 };
