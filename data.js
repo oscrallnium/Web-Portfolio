@@ -115,7 +115,7 @@ const SITE_DATA = {
       title: "OrbitWatch",
       description: "Space education platform tracking the ISS with real-time NASA integration.",
       tags: ["SwiftUI", "Metal"],
-      link: "#",
+      link: "orbitwatch.html",
       visualStyle: "orbit",
       // image: "assets/orbitwatch.png",  ← uncomment to use a real image
     },

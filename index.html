@@ -211,7 +211,7 @@
         <p class="hero__desc">${h.description}</p>
         <div class="hero__actions">
           <a href="${h.primaryButton.link}" class="btn btn--primary">${h.primaryButton.text} ${I.arrow}</a>
-          <a href="${h.secondaryButton.link}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">${I.paper} ${h.secondaryButton.text}</a>
+          <a href="${h.secondaryButton.link}" class="btn btn--secondary">${I.paper} ${h.secondaryButton.text}</a>
         </div>
         <div class="hero__meta">
           <span class="hero__meta-item">${I.pin} ${h.location}</span>
@@ -334,10 +334,7 @@
     document.getElementById('footerSection').innerHTML = `
       <div class="footer__copy">${ft.copy}</div>
       <div class="footer__links">
-        ${ft.links.map(l => {
-          const isExternal = l.url.startsWith('http');
-          return `<a href="${l.url}" class="footer__link"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''}>${l.text}</a>`;
-        }).join('')}
+        ${ft.links.map(l => `<a href="${l.url}" class="footer__link">${l.text}</a>`).join('')}
       </div>`;
 
     // ─── SCROLL REVEAL ───────────────────────────────────
