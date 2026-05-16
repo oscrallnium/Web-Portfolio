@@ -14,7 +14,7 @@ const SITE_DATA = {
     firstName: "Oscar Allen",
     lastName: "Brioso.",
     description:
-      "Multi-Platform Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
+      "iOS Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
     primaryButton: { text: "Explore Projects", link: "#projects" },
     secondaryButton: { text: "Resume", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     location: "Makati City, PH",
@@ -32,13 +32,13 @@ const SITE_DATA = {
       company: "Agile Digital Ventures Inc.",
       companyRole: "Hybrid",
       bullets: [
-        "Develop and maintain the iOS application by resolving bugs and enhancing UI/UX based on QA feedback and business requirements.",
-        "Ensure code quality and stability by implementing unit testing suites for essential features.",
-        "Conduct code reviews for other iOS developers to ensure alignment with the team's coding standards and project requirements.",
-        "Create technical documentation for the mobile team, including coding standards for both iOS and Android, to support internal and external collaborations and streamline workflows with other departments.",
-        "Reduced application crash frequency by 30% since 2025 by proactively monitoring and diagnosing iOS and Android Crashlytics reports.",
-        "Increased revenue by 15% by leading cross-platform digital marketing integrations and optimizing user flows for iOS and Android.",
-        "Managed the end-to-end internal testing, release pipeline, and App Store distribution for iOS applications.",
+        "Developed full-lifecycle iOS applications—optimizing UI/UX and App Store distribution",
+        "Ensured code quality by writing comprehensive unit tests from cart checkout through payment",
+        "Performed code reviews to ensure coding standard compliance.",
+        "Create technical documentation for the mobile team.",
+        "Led cross-platform digital marketing integrations and optimized user flows.",
+        "Migrated legacy Storyboards to programmatic UIKit and SwiftUI.",
+        "Managed the complete iOS lifecycle, from UI/UX enhancements to release pipelines and App Store distribution.",
       ],
     },
     {
@@ -73,7 +73,7 @@ const SITE_DATA = {
       {
         number: "01",
         title: "Languages & Frameworks",
-        tags: ["Swift", "SwiftUI", "Objective-C", "UIKit", "Python", "Core Data", "XCTest"],
+        tags: ["Swift", "SwiftUI", "Objective-C", "UIKit", "Python", "Core Data", "XCTest", "Metal", "Alamofire"],
       },
       {
         number: "02",
@@ -134,7 +134,7 @@ const SITE_DATA = {
     title: "Let's build something",
     highlight: "exceptional.",
     primaryButton: { text: "Get in Touch", link: "mailto:oscallen@gmail.com" },
-    secondaryButton: { text: "0945-543-5449", link: "tel:09455435449" },
+    // secondaryButton: { text: "0945-543-5449", link: "tel:09455435449" },
   },
 
   // ─── FOOTER ────────────────────────────────────────────
