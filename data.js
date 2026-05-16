@@ -4,58 +4,67 @@
 
 const SITE_DATA = {
 
-  // ─── NAVIGATION & BRANDING ─────────────────────────────
-  brand: "Web Portfolio",
-  navLinks: ["Experience", "Expertise", "Projects", "Education"],
+  // ─── BRANDING ──────────────────────────────────────────
+  brand: "oscar.brioso",
 
-  // ─── HERO SECTION ──────────────────────────────────────
+  navLinks: [
+    { label: "experience", href: "#experience" },
+    { label: "expertise",  href: "#expertise"  },
+    { label: "projects",   href: "#projects"   },
+    { label: "education",  href: "#education"  },
+    { label: "contact",    href: "#contact"    },
+  ],
+
+  // ─── HERO ──────────────────────────────────────────────
   hero: {
-    badge: "Available for New Challenges",
-    firstName: "Oscar Allen",
-    lastName: "Brioso.",
-    description:
-      "iOS Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
-    primaryButton: { text: "Explore Projects", link: "#projects" },
-    secondaryButton: { text: "Resume", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
-    location: "Makati City, PH",
-    email: "oscallen@gmail.com",
-    activeProgress: "Refining Mobile Architecture",
+    firstName:     "Oscar Allen",
+    lastName:      "Brioso",
+    role:          "iOS / Multi-Platform Engineer",
+    description:   "iOS Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
+    primaryButton:   { text: "explore projects", link: "#projects" },
+    secondaryButton: { text: "./resume.pdf", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
+    location:      "Makati City, PH",
+    badge:         "Available for New Challenges",
+    activeProgress:"Refining Mobile Architecture",
   },
 
-  // ─── PROFESSIONAL HISTORY ──────────────────────────────
-  // Each item: { date, role, roleLabel, company, companyRole, bullets OR description }
+  // ─── EXPERIENCE ────────────────────────────────────────
+  // employment: short string shown as a tag (e.g. "hybrid", "internship", "remote")
+  // current: true adds a "current" highlight badge
   experience: [
     {
-      date: "Oct 2025 — Present",
-      role: "Lead iOS Engineer",
-      roleLabel: "Current Role",
-      company: "Agile Digital Ventures Inc.",
-      companyRole: "Hybrid",
+      date:       "Oct 2025 — Present",
+      role:       "Lead iOS Engineer",
+      company:    "Agile Digital Ventures Inc.",
+      employment: "hybrid",
+      current:    true,
       bullets: [
-        "Developed full-lifecycle iOS applications—optimizing UI/UX and App Store distribution",
-        "Ensured code quality by writing comprehensive unit tests from cart checkout through payment",
+        "Developed full-lifecycle iOS applications—optimizing UI/UX and App Store distribution.",
+        "Ensured code quality by writing comprehensive unit tests from cart checkout through payment.",
         "Performed code reviews to ensure coding standard compliance.",
-        "Create technical documentation for the mobile team.",
+        "Created technical documentation for the mobile team.",
         "Led cross-platform digital marketing integrations and optimized user flows.",
         "Migrated legacy Storyboards to programmatic UIKit and SwiftUI.",
         "Managed the complete iOS lifecycle, from UI/UX enhancements to release pipelines and App Store distribution.",
       ],
     },
     {
-      date: "Jul 2024 — Sept 2025",
-      company: "Red Planet Hotels",
-      companyRole: "iOS Developer (Hybrid)",
+      date:       "Jul 2024 — Sept 2025",
+      role:       "iOS Developer",
+      company:    "Red Planet Hotels",
+      employment: "hybrid",
       bullets: [
-        "Maintained and enhanced the company's iOS booking application for hotel branches in the Philippines and Thailand, improving stability, performance, and user experience, reducing app-issues by 40% from Q3 2024 to Q3 2025.",
+        "Maintained and enhanced the company's iOS booking application for hotel branches in the Philippines and Thailand, reducing app-issues by 40% from Q3 2024 to Q3 2025.",
         "Integrated RESTful APIs to enable efficient data retrieval, improving load times and enhancing user experience.",
-        "Led the implementation of analytics, push notifications, cloud messaging, payment gateway integration, and UI/UX enhancements in the iOS app, contributing to a 40% increase in market coverage in Q2 2025.",
-        "Collaborated with designers, product managers, android and backend engineers to deliver intuitive, user-friendly interfaces, ensuring clear and consistent communication of progress and blockers.",
+        "Led the implementation of analytics, push notifications, cloud messaging, payment gateway integration, and UI/UX enhancements, contributing to a 40% increase in market coverage in Q2 2025.",
+        "Collaborated with designers, product managers, android and backend engineers to deliver intuitive, user-friendly interfaces.",
       ],
     },
     {
-      date: "Nov 2023 — May 2024",
-      company: "D.W. Morgan",
-      companyRole: "iOS Engineer (Intern)",
+      date:       "Nov 2023 — May 2024",
+      role:       "iOS Engineer (Intern)",
+      company:    "D.W. Morgan",
+      employment: "internship",
       bullets: [
         "Developed reusable Cocoapod libraries (document scanner, photo viewer) used across company apps.",
         "Improved project efficiency by ~30% through Jira-based workflow and Agile methodologies.",
@@ -65,85 +74,76 @@ const SITE_DATA = {
   ],
 
   // ─── EXPERTISE ─────────────────────────────────────────
-  expertise: {
-    headline: "Expertise.",
-    description:
-      "Precision engineering across the full stack, from core Swift development to robust DevOps pipelines.",
-    categories: [
-      {
-        number: "01",
-        title: "Languages & Frameworks",
-        tags: ["Swift", "SwiftUI", "Objective-C", "UIKit", "Python", "Core Data", "XCTest", "Metal", "Alamofire"],
-      },
-      {
-        number: "02",
-        title: "Infrastructure & DevOps",
-        tags: ["Firebase", "Fastlane", "App Store Connect", "Git", "Crashlytics", "AWS"],
-      },
-    ],
-  },
+  expertise: [
+    {
+      number: "01",
+      title:  "languages & frameworks",
+      tags:   ["Swift", "SwiftUI", "Objective-C", "UIKit", "Python", "Core Data", "XCTest", "Metal", "Alamofire"],
+    },
+    {
+      number: "02",
+      title:  "infrastructure & devops",
+      tags:   ["Firebase", "Fastlane", "App Store Connect", "Git", "Crashlytics", "AWS"],
+    },
+  ],
+
+  // ─── PROJECTS ──────────────────────────────────────────
+  // shots: up to 3 image paths shown as a stacked phone mockup
+  projects: [
+    {
+      slug:    "orbitwatch",
+      title:   "OrbitWatch",
+      year:    "2026",
+      tagline: "Space education platform tracking the ISS with real-time NASA integration.",
+      tags:    ["SwiftUI", "MapKit", "Async/Await", "NASA API"],
+      link:    "orbitwatch.html",
+      shots:   ["assets/ow-home.png", "assets/ow-iss.png", "assets/ow-apod.png"],
+    },
+    {
+      slug:    "pantracker",
+      title:   "PanTracker",
+      year:    "2025",
+      tagline: "Intelligent inventory system featuring expiration alerts, categorization, and receipt scanning.",
+      tags:    ["UIKit", "Core Data", "VisionKit", "Notifications"],
+      link:    "pantracker.html",
+      shots:   ["assets/pt-inventory.png", "assets/pt-additem.png", "assets/pt-detail.png"],
+    },
+  ],
 
   // ─── EDUCATION ─────────────────────────────────────────
   education: {
     academic: [
       {
-        icon: "graduation",
-        name: "University of the Philippines Los Baños",
+        name:   "University of the Philippines Los Baños",
         detail: "BS in Chemical Engineering",
-        quote: '"Engineering rigor translated from chemical processes to digital architectures."',
+        quote:  "Engineering rigor translated from chemical processes to digital architectures.",
       },
     ],
     certifications: [
-      {
-        icon: "shield",
-        name: "OWASP Cybersecurity",
-        detail: "Professional Certification",
-      },
-      {
-        icon: "layers",
-        name: "Agile Methodology",
-        detail: "Workflow Training",
-      },
+      { name: "OWASP Cybersecurity", detail: "Professional Certification" },
+      { name: "Agile Methodology",   detail: "Workflow Training"           },
     ],
   },
 
-  // ─── FEATURED PROJECTS ─────────────────────────────────
-  // visualStyle: "orbit" | "pan" | "grid" (CSS-generated placeholder)
-  // Or use `image: "path/to/screenshot.png"` for a real image
-  projects: [
-    {
-      title: "OrbitWatch",
-      description: "Space education platform tracking the ISS with real-time NASA integration.",
-      tags: ["SwiftUI", "Metal"],
-      link: "orbitwatch.html",
-      visualStyle: "orbit",
-      // image: "assets/orbitwatch.png",  ← uncomment to use a real image
-    },
-    {
-      title: "PanTracker",
-      description: "Intelligent inventory system featuring expiration alerts and categorization.",
-      tags: ["CoreData", "UIKit"],
-      link: "pantracker.html",
-      visualStyle: "pan",
-      // image: "assets/pantracker.png",
-    },
-  ],
-
-  // ─── CALL TO ACTION ────────────────────────────────────
-  cta: {
-    title: "Let's build something",
+  // ─── CONTACT ───────────────────────────────────────────
+  contact: {
+    title:     "Let's build something",
     highlight: "exceptional.",
-    primaryButton: { text: "Get in Touch", link: "mailto:oscallen@gmail.com" },
-    // secondaryButton: { text: "0945-543-5449", link: "tel:09455435449" },
+    lines: [
+      { label: "mail", value: "oscallen@gmail.com",          href: "mailto:oscallen@gmail.com",            copy: "oscallen@gmail.com"                    },
+      { label: "tel",  value: "+63 945 543 5449",            href: "tel:+639455435449",                    copy: "+639455435449"                         },
+      { label: "link", value: "linkedin.com/in/oscrallnium", href: "https://linkedin.com/in/oscrallnium/", copy: "https://linkedin.com/in/oscrallnium/"  },
+      { label: "loc",  value: "Makati City, Philippines",    href: null,                                    copy: null                                    },
+    ],
   },
 
   // ─── FOOTER ────────────────────────────────────────────
   footer: {
-    copy: "",
+    build: "v1.2.0 · built may 2026",
     links: [
-      { text: "Email", url: "mailto:oscallen@gmail.com" },
-      { text: "LinkedIn", url: "https://linkedin.com/in/oscrallnium/" },
-      { text: "Resume", url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
+      { text: "Email",    url: "mailto:oscallen@gmail.com"                                                   },
+      { text: "LinkedIn", url: "https://linkedin.com/in/oscrallnium/"                                        },
+      { text: "Resume",   url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
     ],
   },
 };

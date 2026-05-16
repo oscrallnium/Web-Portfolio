@@ -251,6 +251,7 @@
 <body>
   <div id="root"></div>
 
+  <script src="data.js"></script>
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -258,120 +259,8 @@
   <script type="text/babel">
     const { useState, useEffect, useRef, useCallback } = React;
 
-    /* ─── site data ─────────────────────────────────────────────────── */
-    const D = {
-      brand: "oscar.brioso",
-      navLinks: [
-        { label: "experience", href: "#experience" },
-        { label: "expertise",  href: "#expertise"  },
-        { label: "projects",   href: "#projects"   },
-        { label: "education",  href: "#education"  },
-        { label: "contact",    href: "#contact"    },
-      ],
-      hero: {
-        firstName:     "Oscar Allen",
-        lastName:      "Brioso",
-        role:          "iOS / Multi-Platform Engineer",
-        description:   "Multi-Platform Engineer specializing in high-performance iOS, Android, and Front-End ecosystems. Building precision-milled digital experiences.",
-        primaryButton:   { text: "explore projects", link: "#projects" },
-        secondaryButton: { text: "./resume.pdf", link: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
-        location:      "Makati City, PH",
-        badge:         "Available for New Challenges",
-        activeProgress:"Refining mobile architecture",
-      },
-      experience: [
-        {
-          date: "2025.10 — now",
-          role: "Lead iOS Engineer",
-          company: "Agile Digital Ventures, Inc.",
-          employment: "hybrid",
-          current: true,
-          bullets: [
-            "Develop and maintain the iOS application by resolving bugs and enhancing UI/UX based on QA feedback and business requirements.",
-            "Ensure code quality and stability by implementing unit testing suites for essential features.",
-            "Conduct code reviews for other iOS developers to align with team coding standards and project requirements.",
-            "Author technical documentation for the mobile team, including iOS + Android coding standards, to streamline workflows across departments.",
-            "Reduced application crash frequency by 30% since 2025 by proactively monitoring iOS and Android Crashlytics reports.",
-            "Increased revenue by 15% by leading cross-platform digital marketing integrations and optimizing user flows.",
-            "Managed end-to-end internal testing, release pipeline, and App Store distribution for iOS.",
-          ],
-        },
-        {
-          date: "2024.07 — 2025.09",
-          role: "iOS Developer",
-          company: "Red Planet Hotels",
-          employment: "hybrid",
-          bullets: [
-            "Maintained and enhanced the company's iOS booking app for hotel branches in the Philippines and Thailand, reducing reported app issues by 40% from Q3 2024 to Q3 2025.",
-            "Integrated RESTful APIs to enable efficient data retrieval, improving load times and UX.",
-            "Led analytics, push notifications, cloud messaging, payment-gateway integration, and UI/UX enhancements — contributing to a 40% increase in market coverage in Q2 2025.",
-            "Collaborated with designers, PMs, Android and backend engineers to deliver intuitive interfaces with clear, consistent communication of progress and blockers.",
-          ],
-        },
-        {
-          date: "2023.11 — 2024.05",
-          role: "iOS Engineer (Intern)",
-          company: "D.W. Morgan",
-          employment: "internship",
-          bullets: [
-            "Developed reusable Cocoapod libraries (document scanner, photo viewer) used across company apps.",
-            "Improved project efficiency by ~30% through Jira-based workflow and Agile methodologies.",
-            "Contributed to Sprint Planning and Retrospectives, ensuring iterative progress and alignment.",
-          ],
-        },
-      ],
-      expertise: [
-        { number: "01", title: "languages & frameworks", tags: ["Swift","SwiftUI","Objective-C","UIKit","Python","Core Data","XCTest"] },
-        { number: "02", title: "infrastructure & devops",  tags: ["Firebase","Fastlane","App Store Connect","Git","Crashlytics","AWS"] },
-      ],
-      projects: [
-        {
-          slug:    "orbitwatch",
-          title:   "OrbitWatch",
-          year:    "2026",
-          tagline: "Space education platform tracking the ISS with real-time NASA integration.",
-          tags:    ["SwiftUI","MapKit","Async/Await","NASA API"],
-          link:    "orbitwatch.html",
-          shots:   ["assets/ow-home.png","assets/ow-iss.png","assets/ow-apod.png"],
-        },
-        {
-          slug:    "pantracker",
-          title:   "PanTracker",
-          year:    "2025",
-          tagline: "Intelligent inventory system featuring expiration alerts, categorization, and receipt scanning.",
-          tags:    ["UIKit","Core Data","VisionKit","Notifications"],
-          link:    "pantracker.html",
-          shots:   ["assets/pt-inventory.png","assets/pt-additem.png","assets/pt-detail.png"],
-        },
-      ],
-      education: {
-        academic: [
-          { name: "University of the Philippines Los Baños", detail: "BS in Chemical Engineering", quote: "Engineering rigor translated from chemical processes to digital architectures." },
-        ],
-        certifications: [
-          { name: "OWASP Cybersecurity", detail: "Professional Certification" },
-          { name: "Agile Methodology",   detail: "Workflow Training"           },
-        ],
-      },
-      contact: {
-        title:     "Let's build something",
-        highlight: "exceptional.",
-        lines: [
-          { label: "mail", value: "oscallen@gmail.com",          href: "mailto:oscallen@gmail.com",            copy: "oscallen@gmail.com"                    },
-          { label: "tel",  value: "+63 945 543 5449",            href: "tel:+639455435449",                    copy: "+639455435449"                         },
-          { label: "link", value: "linkedin.com/in/oscrallnium", href: "https://linkedin.com/in/oscrallnium/", copy: "https://linkedin.com/in/oscrallnium/"  },
-          { label: "loc",  value: "Makati City, Philippines",    href: null,                                    copy: null                                    },
-        ],
-      },
-      footer: {
-        build: "v1.2.0 · built may 2026",
-        links: [
-          { text: "Email",    url: "mailto:oscallen@gmail.com"                                                   },
-          { text: "LinkedIn", url: "https://linkedin.com/in/oscrallnium/"                                        },
-          { text: "Resume",   url: "https://drive.google.com/file/d/1UDRK8l-ERo02F2fKWVzdq8IU-oxzDMo1/view?usp=sharing" },
-        ],
-      },
-    };
+    /* ─── site data (loaded from data.js) ──────────────────────────── */
+    const D = window.SITE_DATA;
 
     const ACCENT_OPTIONS = ["#6ee7b7","#f59e0b","#60a5fa","#f0abfc"];
 
