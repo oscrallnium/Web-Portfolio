@@ -131,7 +131,6 @@ const SITE_DATA = {
     highlight: "exceptional.",
     lines: [
       { label: "mail", value: "oscallen@gmail.com",          href: "mailto:oscallen@gmail.com",            copy: "oscallen@gmail.com"                    },
-      { label: "tel",  value: "+63 945 543 5449",            href: "tel:+639455435449",                    copy: "+639455435449"                         },
       { label: "link", value: "linkedin.com/in/oscrallnium", href: "https://linkedin.com/in/oscrallnium/", copy: "https://linkedin.com/in/oscrallnium/"  },
       { label: "loc",  value: "Makati City, Philippines",    href: null,                                    copy: null                                    },
     ],
